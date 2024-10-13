@@ -1,0 +1,7 @@
+{
+  "name": "LlevameApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
