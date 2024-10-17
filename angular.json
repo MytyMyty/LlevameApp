@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [ "lodash"],
             "outputPath": "www",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -31,7 +32,11 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/global.scss", "src/theme/variables.scss"],
+            "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/global.scss",
+              "src/theme/variables.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -136,7 +141,8 @@
   "cli": {
     "schematicCollections": [
       "@ionic/angular-toolkit"
-    ]
+    ],
+    "analytics": "778ae0b9-a703-45f0-b4ff-018f76cdb763"
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {

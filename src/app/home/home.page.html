@@ -1,20 +1,42 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      #LlevameDuoc      Bienvenido, 
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="map-wrapper">
+    <div class="map" #map></div>
+  </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="bottom request-controls">
+    <ion-row>
+      <ion-col width-50>
+        <ion-button color="light" expand="block">
+          <ion-icon name="card"> </ion-icon>
+              VISA **45
+        </ion-button>
+      </ion-col>
+      <ion-col width-50>
+        <ion-button color="light" expand="block">
+          <ion-icon name="cash"> </ion-icon>
+            EFECTIVO
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col>
+        <ion-button color="medium" *ngIf="!isPickupRequested" expand="block" (click)="confirmPickup()">SOLICITAR PICKUP</ion-button>
+        <ion-button color="secondary" *ngIf="isPickupRequested" expand="block" (click)="cancelPickup()">CANCELAR PICKUP</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        Tiempo Aproximado de Pickup 5min
+      </ion-col>
+    </ion-row>
+
   </div>
 </ion-content>
