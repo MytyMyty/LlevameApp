@@ -2,6 +2,7 @@ import { GmapsService } from '../services/gmaps/gmaps.service';
 import { Component, ElementRef, ViewChild, Renderer2, OnInit } from '@angular/core';
 
 
+declare var google: any;
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -26,20 +27,22 @@ export class HomePage implements OnInit {
     this.loadMap();
   }
   async loadMap() {
-    try{
-      let googleMaps: any = await this.gmaps.loadGoogleMaps();
-      this.googleMaps = googleMaps;
+    try {
+      const { Map } = await google.maps.importLibrary("maps");
+      const googleMaps = await this.gmaps.loadGoogleMaps();
       const mapEl = this.mapElementRef.nativeElement;
       const location = new googleMaps.LatLng(this.center.lat, this.center.lng);
       this.map = new googleMaps.Map(mapEl, {
+        mapId: '95f483ddcfa9ba3f',
         center: location,
         zoom: 11,
+        disableDefaultUI: true,
+        
       });
       this.renderer.addClass(mapEl, 'visible');
-    }catch(e){
+    } catch (e) {
       console.log(e);
     }
-
   }
 
   confirmPickup(){

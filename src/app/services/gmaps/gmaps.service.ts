@@ -13,7 +13,7 @@ export class GmapsService {
      return Promise.resolve(gModule.maps);
     }
     return new Promise((resolve, reject) => {
-      const script = document.createElement('script');
+      const script  = document.createElement('script');
       script.src =
         'https://maps.googleapis.com/maps/api/js?key=' +
         environment.googleMapsApiKey;
