@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class APIControllerService {
 
   /* Configuramos URL de nuestar API a consumir */
-  apiURL = "http://https://reqres.in/api/";
+  apiURL = " http://localhost:3301";
 
   constructor(private http: HttpClient) { }
   /* Cada funcion que realizaremos de la linea API Consume esta ligada a uyna llamada HTTP
@@ -25,16 +25,16 @@ export class APIControllerService {
 
   */
   getUsers(): Observable<any> {
-    return this.http.get(this.apiURL + "/api/users?page=2");
+    return this.http.get(this.apiURL + "/users");
   }
   postUser(data: any): Observable<any> {
-    return this.http.post(this.apiURL + "/api/users", data);
+    return this.http.post(this.apiURL + "/users", data);
   }
   updateUser(id: string, data: any): Observable<any> {
-    return this.http.put(this.apiURL + "/api/users/2" + id, data);
+    return this.http.put(this.apiURL + "/users/" + id, data);
   }
 
   deleteUser(id: string): Observable<any> {
-    return this.http.delete(this.apiURL + "/api/users/2" + id);
+    return this.http.delete(this.apiURL + "/users/" + id);
   }
 }

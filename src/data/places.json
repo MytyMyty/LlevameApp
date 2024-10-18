@@ -1,0 +1,97 @@
+{
+    "places": [
+        {
+            "id": 1,
+            "formatted_address": "Av. España 8, Santiago, Región Metropolitana",
+            "geometry": 
+            {
+                "location": { "lat":-33.4489359,"lng":-70.6726768},
+                "viewport": 
+                { 
+                    "northeast": 
+                        { "lat":-33.4489359,"lng":-70.6726768 },
+                    "southwest": 
+                        { "lat":-33.4494359,"lng":-70.6728768 }     
+                }      
+            },
+            "name": "DuocUC Sede Alameda",
+            "opening_hours": 
+            {
+                "Monday: 8:30 AM – 22:45 PM": true,
+                "Tuesday: 8:30 AM – 22:45 PM": true,
+                "Wednesday: 8:30 AM – 22:45 PM": true,
+                "Thursday: 8:30 AM – 22:45 PM": true,
+                "Friday: 8:30 AM – 22:45 PM": true,
+                "Saturday: 8:30 AM – 14:00 PM": true,
+                "Sunday: Closed": false
+            },
+            "telefono": [
+                "+56 4422 01098",
+                "+56 2 7271 20245"
+            ]
+        },
+        {
+            "id": 2,
+            "formatted_address": "Padre Alonso de Ovalle 1586, 8330196 Santiago, Región Metropolitana",
+            "geometry": 
+            {
+                "location": { "lat":-33.4492176,"lng":-70.6585273, "a":264,"y":35,"h":19,"t":43.5},
+                "viewport": 
+                { 
+                    "northeast": 
+                        { "lat":-33.4489359,"lng":-70.6726768 },
+                    "southwest": 
+                        { "lat":-33.4494359,"lng":-70.6728768 }     
+                }      
+            },
+            "name": "DuocUC Sede Padre Alonso de Ovalle",
+            "opening_hours": 
+            {
+                "Monday: 8:30 AM – 22:45 PM": true,
+                "Tuesday: 8:30 AM – 22:45 PM": true,
+                "Wednesday: 8:30 AM – 22:45 PM": true,
+                "Thursday: 8:30 AM – 22:45 PM": true,
+                "Friday: 8:30 AM – 22:45 PM": true,
+                "Saturday: 8:30 AM – 14:00 PM": true,
+                "Sunday: Closed": false
+            },
+            "telefono": [
+                "+56223540600",
+                "+5623540618"
+            ]
+        },
+        {
+            "id": 3,
+            "formatted_address": "Antonio Varas 666, 7500961 Providencia, Región Metropolitana",
+            "geometry": 
+            {
+                "location": { "lat":-33.4313911,"lng":-70.6169312, "a":141,"y":35,"h":133,"t":61},
+                "viewport": 
+                { 
+                    "northeast": 
+                        { "lat":-33.4489359,"lng":-70.6726768 },
+                    "southwest": 
+                        { "lat":-33.4494359,"lng":-70.6728768 }     
+                }      
+            },
+            "name": "DuocUC Sede Antonio Varas",
+            "opening_hours": 
+            {
+                "Monday: 8:30 AM – 21:30 PM": true,
+                "Tuesday: 8:30 AM – 21:30 PM": true,
+                "Wednesday: 8:30 AM – 21:30 PM": true,
+                "Thursday: 8:30 AM – 21:30 PM": true,
+                "Friday: 8:30 AM – 21:30 PM": true,
+                "Saturday: 8:30 AM – 13:30 PM": true,
+                "Sunday: Closed": false
+            },
+            "telefono": [
+                "+56223540400",
+                "+56235405158"
+            ]
+        }
+    
+    
+    
+    ]       
+}
