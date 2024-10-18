@@ -1,21 +1,25 @@
 {
     "users": [
       {
+        "id": "1",
         "username": "j.riquelmee",
         "email": "correo@correo.cl",
         "password": "pass1234"
       },
       {
+        "id": "2",
         "username": "z.test",
         "email": "email@gmail.com",
         "password": "password1234"
       },
       {
+        "id": "3",
         "username": "i.prueba",
         "email": "prueba@outlook.com",
         "password": "contraseña"
       },
       {
+        "id": "4",
         "username": "prueba",
         "email": "correo2@correo.cl",
         "password": "12345678910"

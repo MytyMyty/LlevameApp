@@ -1,5 +1,7 @@
 import { GmapsService } from '../services/gmaps/gmaps.service';
 import { Component, ElementRef, ViewChild, Renderer2, OnInit } from '@angular/core';
+import { AuthenticatorService } from '../services/authenticator.service';
+import { Router } from '@angular/router';
 
 
 declare var google: any;
@@ -14,12 +16,19 @@ export class HomePage implements OnInit {
   center = { lat: -33.4990709, lng: -70.665723 };
   map : any;
 
+  public username: string = '';
   public isPickupRequested: boolean = false;
   constructor(
+    private router: Router, 
+    private auth: AuthenticatorService,
     private gmaps: GmapsService,
     private renderer: Renderer2,
   ) {
+    const navegacion = this.router.getCurrentNavigation();
+    const state = navegacion?.extras.state as { username: string };
+    this.username = state?.username || '';
   }
+
 
   ngOnInit(): void {
   }
@@ -53,5 +62,9 @@ export class HomePage implements OnInit {
   cancelPickup(){
     this.isPickupRequested = false;
     console.log('cancelPickup');
+  }
+  logout() {
+    this.auth.logout()
+    this.router.navigate(['/login']);
   }
 }

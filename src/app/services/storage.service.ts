@@ -1,4 +1,3 @@
-
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
 
@@ -39,9 +38,7 @@ export class StorageService {
   }
   async get(key: string): Promise<any> {
     await this.BDDConectada()
-    const value = await this.bdd.get(key);
-    console.log('Value retrieved from database:', value);
-    return value;
+    return this.bdd.get(key);
   }
 
   async set(key: string, valor: any): Promise<any> {

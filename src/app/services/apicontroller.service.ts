@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, Optional } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { Users } from '../interfaces/users';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +10,7 @@ import { Observable } from 'rxjs';
 export class APIControllerService {
 
   /* Configuramos URL de nuestar API a consumir */
-  apiURL = " http://localhost:3301";
+  apiURL = environment.apiURL;
 
   constructor(private http: HttpClient) { }
   /* Cada funcion que realizaremos de la linea API Consume esta ligada a uyna llamada HTTP
@@ -24,17 +26,17 @@ export class APIControllerService {
     dando respuestas de la linea 200-300 como positivos y 400-500 en caso de errores 
 
   */
-  getUsers(): Observable<any> {
-    return this.http.get(this.apiURL + "/users");
+  getUsers(): Observable<Users> {
+    return this.http.get<Users>(this.apiURL + "/users");
   }
-  postUser(data: any): Observable<any> {
-    return this.http.post(this.apiURL + "/users", data);
+  postUser(data: any): Observable<Users> {
+    return this.http.post<Users>(this.apiURL + "/users", data);
   }
-  updateUser(id: string, data: any): Observable<any> {
-    return this.http.put(this.apiURL + "/users/" + id, data);
+  updateUser(id: string, data: any): Observable<Users> {
+    return this.http.put<Users>(this.apiURL + "/users/" + id, data);
   }
 
-  deleteUser(id: string): Observable<any> {
-    return this.http.delete(this.apiURL + "/users/" + id);
+  deleteUser(id: string): Observable<Users> {
+    return this.http.delete<Users>(this.apiURL + "/users/" + id);
   }
 }

@@ -1,58 +1,38 @@
 
 import { Injectable } from '@angular/core';
-import { StorageService } from './storage.service';
+import { Observable } from 'rxjs';
+import { Users } from '../interfaces/users';
+import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthenticatorService {
+  private apiURL = environment.apiURL
+
   //Generamos una variable boolean para rectificar el actual estado de conexion con el autentificador
   connnectionStatus: boolean = false;
-  constructor(private storage: StorageService) {}
+  constructor(private http: HttpClient) {}
 
-  //Login para conectarse al sistema
-  async loginBDD(username: string, password: String): Promise<boolean> {
-    //OBtengo un promise
-    //Promise tiene 2 valores || resuelto y no resuelto
-    return this.storage
-      .get(username)
-      .then((res) => {
-        if (res && res.username == username && res.password == password) {
-          this.connnectionStatus = true;
-          return true;
-        } else {
-          return false;
-        }
-      })
-      //Si hay un error en el sistema, mapeamos para que devuelva false
-      .catch((error) => {
-        console.log('Error en el sistema: ' + error);
-        return (false);
-      });
+  loginBDD(username: string, password: string): Observable<Users[]> {
+    console.log(`${this.apiURL}/users?username=${username}&password=${password}`);
+    return this.http.get<Users[]>(
+      `${this.apiURL}/users?username=${username}&password=${password}`
+    );
   }
 
+
+  //Generamos funcion para validar usuario contraseña
+  //Si equivale a los datos configurados entregara valor true si no Indicara falso
+  
   //Logout para desconectar del sistema
   logout() {
     this.connnectionStatus = false;
   }
   //Funcion para consultar el estado de conexion
-  isConnected() {
+  isConected() {
     return this.connnectionStatus;
   }
-  async registrar(user: any):Promise<boolean> {
-    //set(llave,valor)
-    return this.storage.set(user.username, user).then((res) => {
-        if (res != null) {
-          return true;
-        }else{
-          return false;
-        }
-      })
-      .catch((error) => {
-        return false;
-      });
-  }
-
 }
-
-

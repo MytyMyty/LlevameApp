@@ -1,5 +1,4 @@
 export interface Iplaces {
-    id: Number
     formatted_address: String 
     geometry:  Geometry
     name: String
@@ -7,7 +6,6 @@ export interface Iplaces {
     telefono: String[]
 
 }
-
 interface Location{
     lat: Number;
     lng: Number;
