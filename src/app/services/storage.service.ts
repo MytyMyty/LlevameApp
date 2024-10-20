@@ -29,12 +29,17 @@ export class StorageService {
     this.bddStatus = this.onInit();
   }
   async onInit(): Promise<void> {
+    console.log('onInit method called');
     const storage = await this.storage.create();
+    console.log('storage created:', storage);
     this.bdd = storage;
+    console.log('bdd initialized:', this.bdd);
   }
 
   async BDDConectada(): Promise<void> {
+    console.log('BDDConectada method called');
     await this.bddStatus;
+    console.log('bddStatus promise resolved');
   }
   async get(key: string): Promise<any> {
     await this.BDDConectada()

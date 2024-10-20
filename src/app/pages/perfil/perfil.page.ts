@@ -12,8 +12,7 @@ export class PerfilPage implements OnInit {
   constructor(private router: Router, private auth: AuthenticatorService) {
     const navegacion = this.router.getCurrentNavigation();
     const state = navegacion?.extras.state as {
-      username: '';
-      password: '';
+      username: string;
     };
     this.username = state.username;
     //Console.log

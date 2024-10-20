@@ -24,7 +24,6 @@ export class LoginPage {
 
   validar() {
     const { username , password } = this.user;
-    console.log(`username: ${username}, password: ${password}`);
     this.auth.loginBDD(username, password).subscribe({
       next: (response) => {
         if (response.length >= 1) {

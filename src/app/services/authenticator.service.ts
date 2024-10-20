@@ -17,7 +17,6 @@ export class AuthenticatorService {
   constructor(private http: HttpClient) {}
 
   loginBDD(username: string, password: string): Observable<Users[]> {
-    console.log(`${this.apiURL}/users?username=${username}&password=${password}`);
     return this.http.get<Users[]>(
       `${this.apiURL}/users?username=${username}&password=${password}`
     );
@@ -34,5 +33,9 @@ export class AuthenticatorService {
   //Funcion para consultar el estado de conexion
   isConected() {
     return this.connnectionStatus;
+  }
+
+  getUsername() {
+    return sessionStorage.getItem('username');
   }
 }

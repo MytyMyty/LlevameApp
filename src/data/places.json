@@ -5,14 +5,7 @@
             "formatted_address": "Av. España 8, Santiago, Región Metropolitana",
             "geometry": 
             {
-                "location": { "lat":-33.4489359,"lng":-70.6726768},
-                "viewport": 
-                { 
-                    "northeast": 
-                        { "lat":-33.4489359,"lng":-70.6726768 },
-                    "southwest": 
-                        { "lat":-33.4494359,"lng":-70.6728768 }     
-                }      
+                "location": { "lat":-33.4489558866917,"lng": -70.6699861595888}
             },
             "name": "DuocUC Sede Alameda",
             "opening_hours": 
@@ -35,14 +28,7 @@
             "formatted_address": "Padre Alonso de Ovalle 1586, 8330196 Santiago, Región Metropolitana",
             "geometry": 
             {
-                "location": { "lat":-33.4492176,"lng":-70.6585273, "a":264,"y":35,"h":19,"t":43.5},
-                "viewport": 
-                { 
-                    "northeast": 
-                        { "lat":-33.4489359,"lng":-70.6726768 },
-                    "southwest": 
-                        { "lat":-33.4494359,"lng":-70.6728768 }     
-                }      
+                "location": {"lat":-33.44708095015686,"lng": -70.65793783399576}
             },
             "name": "DuocUC Sede Padre Alonso de Ovalle",
             "opening_hours": 
@@ -65,14 +51,7 @@
             "formatted_address": "Antonio Varas 666, 7500961 Providencia, Región Metropolitana",
             "geometry": 
             {
-                "location": { "lat":-33.4313911,"lng":-70.6169312, "a":141,"y":35,"h":133,"t":61},
-                "viewport": 
-                { 
-                    "northeast": 
-                        { "lat":-33.4489359,"lng":-70.6726768 },
-                    "southwest": 
-                        { "lat":-33.4494359,"lng":-70.6728768 }     
-                }      
+                "location": {"lat": -33.43304393913334, "lng": -70.61546841754364}
             },
             "name": "DuocUC Sede Antonio Varas",
             "opening_hours": 

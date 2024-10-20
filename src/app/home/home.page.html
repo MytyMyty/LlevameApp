@@ -1,26 +1,32 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      #LlevameDuoc      Bienvenido, {{username}}
+      #LlevameDuoc
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        Cerrar Sesion
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
+  <app-places-dropdown (placeSelected)="onPlaceSelected($event)" class="select-controls"></app-places-dropdown>
   <div class="map-wrapper">
-    <div class="map" #map></div>
+    <div class="map" #map>
+    </div>
   </div>
 
   <div class="bottom request-controls">
     <ion-row>
       <ion-col width-50>
-        <ion-button color="light" expand="block">
+        <ion-button class="payment" color="light" expand="block">
           <ion-icon name="card"> </ion-icon>
               VISA **45
         </ion-button>
       </ion-col>
       <ion-col width-50>
-        <ion-button color="light" expand="block">
+        <ion-button class="payment" color="light" expand="block">
           <ion-icon name="cash"> </ion-icon>
             EFECTIVO
         </ion-button>
