@@ -56,15 +56,17 @@ export class HomePage implements OnInit {
       const pin = new PinElement({scale: 1.2});
       this.map = new googleMaps.Map(mapEl, {
         mapId: '95f483ddcfa9ba3f',
+        center: location,
+        zoom: 15,
+        disableDefaultUI: true
         
-        zoom: 11,
-        maxZoom: 15,
-        minZoom: 8,
-        gestureHandling: 'greedy',
       });
+      console.log(this.map);
+      console.log(this.map.getZoom());
       const marker = new AdvancedMarkerElement({
         position: location,
         content: pin.element,
+        
       });
       marker.setMap(this.map);
       this.renderer.addClass(mapEl, 'visible');
