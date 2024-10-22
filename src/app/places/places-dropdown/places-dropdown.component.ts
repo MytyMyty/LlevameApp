@@ -4,7 +4,7 @@ import { PlacesService } from 'src/app/services/gmaps/places-service.service';
 @Component({
   selector: 'app-places-dropdown',
   template: `
-    <ion-select placeholder="Selecciona tu sede: " (ionChange)="onPlaceSelected($event)">
+    <ion-select placeholder="Selecciona tu sede: " (ionChange)="onPlaceSelected($event)" [value]="places[2]?.formatted_address">
       <ion-select-option *ngFor="let place of places" [value]="place.formatted_address">
         {{ place.name }}
       </ion-select-option>
