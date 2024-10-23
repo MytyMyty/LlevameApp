@@ -10,8 +10,38 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+<ion-searchbar
+  class="search-bar"
+  search-icon="search-circle"
+  animated="true"
+  show-clear-button="focus"
+  clear-icon="trash-bin"
+  debounce="800"
+  placeholder="Buscar por area, direccion, lugar..."
+  (ionInput)=onSearchChange($event)>
+</ion-searchbar>
 <ion-content>
-  <app-places-dropdown (placeSelected)="onPlaceSelected($event)" class="select-controls"></app-places-dropdown>
+  <ion-list *ngIf="places?.length>0">
+    <ion-item *ngFor="let place of places" class="ion-margin-top">
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label>
+        {{ place?.title}}
+        <p>
+          <ion-text>
+            {{ place?.address}}
+          </ion-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-row class="select-controls">
+    <ion-col size="auto">
+      <ion-icon style="margin-left: 0.5rem" class="icon" name="school-outline"></ion-icon>
+    </ion-col>
+    <ion-col>
+      <app-places-dropdown (placeSelected)="onPlaceSelected($event)" class="places-dropdown"></app-places-dropdown>
+    </ion-col>
+  </ion-row>
   <div class="map-wrapper">
     <div class="map" #map>
     </div>
