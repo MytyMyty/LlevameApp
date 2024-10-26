@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InfiniteScrollCustomEvent, LoadingController } from '@ionic/angular';
+import { Iplaces } from 'src/app/interfaces/iplaces';
 import { PlacesService } from 'src/app/services/gmaps/places-service.service';
 
 @Component({
@@ -9,13 +10,12 @@ import { PlacesService } from 'src/app/services/gmaps/places-service.service';
 })
 export class ListPlacesPage  {
 
-  places=[]
+  places: Iplaces[] = [];
   constructor(private placesService: PlacesService, private loadingCtrl:LoadingController) { }
 
   ionViewWillEnter(){
-    this.loadPlaces();
+   this.loadPlaces();
   }
-
 
   async loadPlaces(event?: InfiniteScrollCustomEvent) {
     const loading = await this.loadingCtrl.create({

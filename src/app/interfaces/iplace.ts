@@ -1,4 +1,4 @@
-export interface Iplaces {
+export interface Iplace {
     formatted_address: String 
     geometry:  Geometry
     name: String

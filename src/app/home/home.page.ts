@@ -79,10 +79,12 @@ export class HomePage implements OnInit,OnDestroy {
   }
   onPlaceSelected(place: any) {
     console.log(place);
+    
     this.loadMap(place);
   }
   //Cargar el mapa
   async loadMap(place?: any) {
+
     try {
       const { Map } = await google.maps.importLibrary("maps");
       const googleMaps = await this.gmaps.loadGoogleMaps();
@@ -119,6 +121,7 @@ export class HomePage implements OnInit,OnDestroy {
       );
 
       await this.addMarker(
+  
         destination_position,
         destinationIconUrl,
       );
@@ -218,11 +221,6 @@ export class HomePage implements OnInit,OnDestroy {
 
  //Animar el marcador a traves de la ruta
  animateMarkerAlongRoute(positions: any[]) {
-   if (this.animationRunning) {
-     this.cancelAnimation();
-   }
- 
-   this.animationRunning = true;
  
    let index = 0;
    const totalPositions = positions.length;
@@ -369,11 +367,11 @@ export class HomePage implements OnInit,OnDestroy {
     return this._places.asObservable();
   }
 
-  onPlaceSelect( event: any) {
-    const selectedAddress = event.target.value;
-    this.geoCode(selectedAddress).then((coordinates) => {
+  onPlaceSelect(place: any) {
+    this.places.length=0
+    this.geoCode(place.address).then((coordinates) => {
       this.dest = coordinates;
-      console.log('Selected address:', selectedAddress);
+      console.log('Selected address:', place.address);
       console.log('Dest coordinates:', this.dest);
     });
   }

@@ -37,7 +37,7 @@ const routes: Routes = [
   },
   {
     path:'**',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./error/error/error.module').then( m => m.ErrorPageModule)
   },
   {
     path: 'controller',
