@@ -68,8 +68,237 @@
                 "+56223540400",
                 "+56235405158"
             ]
+        },
+        {
+            "id": 4,
+            "formatted_address": "Miguel Claro 337, Providencia, Región Metropolitana",
+            "geometry": 
+            {
+                "location": {"lat": -33.43279716162059, "lng": -70.62033132925077}
+            },
+            "name": "DuocUC Sede Educacion Continua",
+            "opening_hours": 
+            {
+                "Monday: 8:30 AM – 22:30 PM": true,
+                "Tuesday: 8:30 AM – 22:30 PM": true,
+                "Wednesday: 8:30 AM – 22:30 PM": true,
+                "Thursday: 8:30 AM – 22:30 PM": true,
+                "Friday: 8:30 AM – 22:30 PM": true,
+                "Saturday: 8:30 AM – 13:30 PM": true,
+                "Sunday: Closed": false
+            },
+            "telefono": [
+                "+56 2 2999 4500"
+            ]
+        },
+        {
+            "id": 5,
+            "formatted_address": "Av. Esq. Blanca 501, 9251863 Maipú, Región Metropolitana",
+            "geometry": 
+            {
+                "location": {"lat": -33.51123988075967, "lng":  -70.75251883185217}
+            },
+            "name": "DuocUC Sede Maipú",
+            "opening_hours": 
+            {
+                "Monday: 9:00AM – 20:30 PM": true,
+                "Tuesday: 9:00 AM – 20:30 PM": true,
+                "Wednesday: 9:00 AM – 20:30 PM": true,
+                "Thursday: 9:00 AM – 20:30 PM": true,
+                "Friday: 9:00 AM – 20:30 PM": true,
+                "Saturday: 9:00 AM – 13:00 PM": true,
+                "Sunday: Closed": false
+            },
+            "telefono": [
+                "+56 2 2560 6900",
+                "+56 2 2560 6935"
+            ]
+        },
+        {
+            "id": 6,
+            "formatted_address": "Serrano 1105, 9580698 Melipilla, Región Metropolitana",
+            "geometry": 
+            {
+                "location": {"lat": -33.694197567633054, "lng":  -71.21368718443266}
+            },
+            "name": "DuocUC Sede Melipilla",
+            "opening_hours": 
+            {
+                "Monday: 8:30 AM – 22:45 PM": true,
+                "Tuesday: 8:30 AM – 22:45 PM": true,
+                "Wednesday: 8:30 AM – 22:45 PM": true,
+                "Thursday: 8:30 AM – 22:45 PM": true,
+                "Friday: 8:30 AM – 22:45 PM": true,
+                "Saturday: 9:00 AM – 14:00 PM": true,
+                "Sunday: Closed": false
+            },
+            "telefono": [
+                "+56 2 2354 0560",
+                "+56 2 2354 0578"
+            ]
+        },
+        {
+            "id": 7,
+            "formatted_address": "Sta. Elena de Huechuraba 1660, 8600036 Huechuraba, Región Metropolitana",
+            "geometry": 
+            {
+                "location": {"lat":-33.363465327028415, "lng": -70.6782174982018}
+            },
+            "name": "DuocUC Sede Plaza Norte",
+            "opening_hours": 
+            {
+                "Monday: 8:30 AM – 22:30 PM": true,
+                "Tuesday: 8:30 AM – 22:30 PM": true,
+                "Wednesday: 8:30 AM – 22:30 PM": true,
+                "Thursday: 8:30 AM – 22:30 PM": true,
+                "Friday: 8:30 AM – 22:30 PM": true,
+                "Saturday: 8:30 AM – 14:00 PM": true,
+                "Sunday: Closed": false
+            },
+            "telefono": [
+                "+56 2 2999 3000",
+                "+56 2 2999 3075"
+            ]
+        },
+        {
+            "id": 8,
+            "formatted_address": "Av. Américo Vespucio 1501, Cerrillos, Región Metropolitana",
+            "geometry": 
+            {
+                "location": {"lat": -33.51514427561303, "lng": -70.71841140297603}
+            },
+            "name": "DuocUC Sede Plaza Oeste",
+            "opening_hours": 
+            {
+                "Monday: 8:30 AM – 21:00 PM": true,
+                "Tuesday: 8:30 AM – 21:00 PM": true,
+                "Wednesday: 8:30 AM – 21:00 PM": true,
+                "Thursday: 8:30 AM – 21:00 PM": true,
+                "Friday: 8:30 AM – 21:00 PM": true,
+                "Saturday: 9:00 AM – 14:00 PM": true,
+                "Sunday: Closed": false
+            },
+            "telefono": [
+                "+56 2 2999 1800",
+                "+564422019",
+                "+56 2 2712 0245"
+            ]
+        },
+        {
+            "id": 9,
+            "formatted_address": "Froilán Roa 7107, 8240000 La Florida, Región Metropolitana",
+            "geometry": 
+            {
+                "location": {"lat":-33.51605225465339,  "lng": -70.59814607002777}
+            },
+            "name": "DuocUC Sede Plaza Vespucio",
+            "opening_hours": 
+            {
+                "Monday: 8:30 AM – 18:15 PM": true,
+                "Tuesday: 8:30 AM – 18:15 PM": true,
+                "Wednesday: 8:30 AM – 18:15 PM": true,
+                "Thursday: 8:30 AM – 18:15 PM": true,
+                "Friday: 8:30 AM – 18:15 PM": true,
+                "Saturday: Closed": false,
+                "Sunday: Closed": false
+            },
+            "telefono": [
+                "+56 2 2354 0700",
+                "+56 2 2354 0753"
+            ]
+        },
+        {
+            "id": 10,
+            "formatted_address": "Avenida Concha Y Toro, Av. San Carlos 1340, Puente Alto, Región Metropolitana",
+            "geometry": 
+            {
+                "location": {"lat": -33.59850999337251,  "lng": -70.57878945540783}
+            },
+            "name": "DuocUC Sede Puente Alto",
+            "opening_hours": 
+            {
+                "Monday: 8:30 AM – 22:30 PM": true,
+                "Tuesday: 8:30 AM – 22:30 PM": true,
+                "Wednesday: 8:30 AM – 22:30 PM": true,
+                "Thursday: 8:30 AM – 22:30 PM": true,
+                "Friday: 8:30 AM – 22:30 PM": true,
+                "Saturday: 9:00 AM – 14:00 PM": true,
+                "Sunday: Closed": false
+            },
+            "telefono": [
+                "+56 2 2354 0900",
+                "+56 2 2354 0941"
+            ]
+        },
+        {
+            "id": 11,
+            "formatted_address": "Freire 862, 8071189 San Bernardo, Región Metropolitana",
+            "geometry": 
+            {
+                "location": {"lat": -33.598864842712196,"lng": -70.70586084909237}
+            },
+            "name": "DuocUC Sede San Bernardo",
+            "opening_hours": 
+            {
+                "Monday: 8:30 AM – 21:00 PM": true,
+                "Tuesday: 8:30 AM – 21:00 PM": true,
+                "Wednesday: 8:30 AM – 21:00 PM": true,
+                "Thursday: 8:30 AM – 21:00 PM": true,
+                "Friday: 8:30 AM – 21:00 PM": true,
+                "Saturday: 9:00 AM – 13:30 PM": true,
+                "Sunday: Closed": false
+            },
+            "telefono": [
+                "+56 2 2999 3373",
+                "+56 2 2999 3333"
+            ]
+        },
+        {
+            "id": 12,
+            "formatted_address": "Cam. El Alba 12881, Las Condes, Región Metropolitana",
+            "geometry": 
+            {
+                "location": {"lat": -33.400294499243365, "lng":  -70.50561532326563}
+            },
+            "name": "DuocUC Sede San Carlos de Apoquindo",
+            "opening_hours": 
+            {
+                "Monday: 8:30 AM – 21:00 PM": true,
+                "Tuesday: 8:30 AM – 21:00 PM": true,
+                "Wednesday: 8:30 AM – 21:00 PM": true,
+                "Thursday: 8:30 AM – 21:00 PM": true,
+                "Friday: 8:30 AM – 21:00 PM": true,
+                "Saturday: 9:00 AM – 14:00 PM": true,
+                "Sunday: Closed": false
+            },
+            "telefono": [
+                "+56 2 2354 0200",
+                "+56 2 2354 0285"
+            ]
+        },
+        {
+            "id": 13,
+            "formatted_address": "Av. Vicuña Mackenna 4917, Metro San Joaquín, 8970117 San Joaquín, Región Metropolitana",
+            "geometry": 
+            {
+                "location": {"lat": -33.50012744941941, "lng": -70.61646249462854}
+            },
+            "name": "DuocUC Sede San Joaquín",
+            "opening_hours": 
+            {
+                "Monday: 8:30 AM – 21:30 PM": true,
+                "Tuesday: 8:30 AM – 21:30 PM": true,
+                "Wednesday: 8:30 AM – 21:30 PM": true,
+                "Thursday: 8:30 AM – 21:30 PM": true,
+                "Friday: 8:30 AM – 21:30 PM": true,
+                "Saturday: 9:00 AM – 13:30 PM": true,
+                "Sunday: Closed": false
+            },
+            "telefono": [
+                "+56 2 2354 0200",
+                "+56 2 2354 0285"
+            ]
         }
-    
     
     
     ]       

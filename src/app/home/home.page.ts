@@ -368,4 +368,14 @@ export class HomePage implements OnInit,OnDestroy {
   get search_places() {
     return this._places.asObservable();
   }
+
+  onPlaceSelect( event: any) {
+    const selectedAddress = event.target.value;
+    this.geoCode(selectedAddress).then((coordinates) => {
+      this.dest = coordinates;
+      console.log('Selected address:', selectedAddress);
+      console.log('Dest coordinates:', this.dest);
+    });
+  }
 }
+

@@ -9,10 +9,6 @@ export interface Iplaces {
 interface Location{
     lat: Number;
     lng: Number;
-    a: Number;
-    y: Number;
-    h: Number;
-    t: Number;
 }
 
 interface Viewport{

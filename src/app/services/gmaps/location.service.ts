@@ -13,8 +13,9 @@ export class LocationService {
 
   private API_KEY= environment.googleMapsApiKey
   private API_URL= environment.apiURL2
-  async getCoordsForAddress(address): Observable<iplace> {
-    return this.http.get<iplace>(`${this.API_URL}/maps/api/geocode/json?address=${id}&key=${this.API_KEY}`)
+  getCoordsForAddress(address): Observable<iplace> {
+    return this.http.get<iplace>(`${this.API_URL}/maps/api/geocode/json?address=${address}&key=${this.API_KEY}`)
   }
 }
+
 
