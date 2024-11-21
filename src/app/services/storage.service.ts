@@ -1,4 +1,3 @@
-
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
 
@@ -30,18 +29,21 @@ export class StorageService {
     this.bddStatus = this.onInit();
   }
   async onInit(): Promise<void> {
+    console.log('onInit method called');
     const storage = await this.storage.create();
+    console.log('storage created:', storage);
     this.bdd = storage;
+    console.log('bdd initialized:', this.bdd);
   }
 
   async BDDConectada(): Promise<void> {
+    console.log('BDDConectada method called');
     await this.bddStatus;
+    console.log('bddStatus promise resolved');
   }
   async get(key: string): Promise<any> {
     await this.BDDConectada()
-    const value = await this.bdd.get(key);
-    console.log('Value retrieved from database:', value);
-    return value;
+    return this.bdd.get(key);
   }
 
   async set(key: string, valor: any): Promise<any> {

@@ -1,4 +1,3 @@
-
 import { Injectable } from '@angular/core';
 import { StorageService } from './storage.service';
 
@@ -10,33 +9,41 @@ export class AuthenticatorService {
   connnectionStatus: boolean = false;
   constructor(private storage: StorageService) {}
 
-  //Login para conectarse al sistema
-  async loginBDD(username: string, password: String): Promise<boolean> {
+  loginBDD(user: string, pass: String): Promise<boolean> {
     //OBtengo un promise
     //Promise tiene 2 valores || resuelto y no resuelto
     return this.storage
-      .get(username)
+      .get(user)
       .then((res) => {
-        if (res && res.username == username && res.password == password) {
+        //Si funciona me devuelve el user completo
+        if (res.password == pass) {
           this.connnectionStatus = true;
           return true;
         } else {
           return false;
         }
       })
-      //Si hay un error en el sistema, mapeamos para que devuelva false
       .catch((error) => {
         console.log('Error en el sistema: ' + error);
-        return (false);
+        return false;
       });
   }
-
+  //Generamos funcion para validar usuario contraseña
+  //Si equivale a los datos configurados entregara valor true si no Indicara falso
+  login(user: String, pass: String): boolean {
+    if (user == 'j.riquelmee' && pass == 'pass1234') {
+      this.connnectionStatus = true;
+      return true;
+    }
+    this.connnectionStatus = false;
+    return false;
+  }
   //Logout para desconectar del sistema
   logout() {
     this.connnectionStatus = false;
   }
   //Funcion para consultar el estado de conexion
-  isConnected() {
+  isConected() {
     return this.connnectionStatus;
   }
   async registrar(user: any):Promise<boolean> {
@@ -52,7 +59,4 @@ export class AuthenticatorService {
         return false;
       });
   }
-
 }
-
-

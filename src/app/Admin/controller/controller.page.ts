@@ -12,7 +12,6 @@ export class ControllerPage implements OnInit {
   constructor(private api: APIControllerService) { }
 
   ngOnInit() {
-    this.cargarUsuarios();
   }
   /* Al momento de instancia el apiController y recuperar el valor del observable en cada metodo
     para consumirlo y controlarlo usaremos la funcion suscribe , la cual nos permite revisar el resultado 
@@ -23,16 +22,7 @@ export class ControllerPage implements OnInit {
     Usaremos una variable any[] para recibir los datos y estos seran mostrados en el front segun los resultados que se encuentren
     de esta manera podremos mostrar toda la informacion almacenada en el JSON que usaremos como API
   */
-  cargarUsuarios() {
-    this.api.getUsers().subscribe(
-      (data) => {
-        this.users = data
-        console.log(this.users)
-      },
-      (error) => {
-        console.log("Error en la llamada :" + error)
-      });
-  }
+
   modificarUsuario(id: any) {
 
   }

@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
-    canActivate: [authGuard]
+    
   },
   {
     path: 'home',
@@ -33,16 +33,41 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule),
-    canActivate: [authGuard]
+    
   },
   {
     path:'**',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./error/error/error.module').then( m => m.ErrorPageModule)
   },
   {
     path: 'controller',
     loadChildren: () => import('./Admin/controller/controller.module').then( m => m.ControllerPageModule)
   },
+  {
+    path: 'add-places',
+    loadChildren: () => import('./places/add-places/add-places.module').then( m => m.AddPlacesPageModule)
+  },
+  {
+    path: 'delete-places',
+    loadChildren: () => import('./places/delete-places/delete-places.module').then( m => m.DeletePlacesPageModule)
+  },
+  {
+    path: 'detail-places',
+    loadChildren: () => import('./places/detail-places/detail-places.module').then( m => m.DetailPlacesPageModule)
+  },
+  {
+    path: 'list-places',
+    loadChildren: () => import('./places/list-places/list-places.module').then( m => m.ListPlacesPageModule)
+  },
+  {
+    path: 'update-places',
+    loadChildren: () => import('./places/update-places/update-places.module').then( m => m.UpdatePlacesPageModule)
+  },
+  {
+    path: 'folder/:id',
+    loadChildren: () => import('./folder/folder/folder.module').then( m => m.FolderPageModule)
+  },
+
   
 ];
 

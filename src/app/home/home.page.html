@@ -1,26 +1,63 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      #LlevameDuoc      Bienvenido, 
+      #LlevameDuoc
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        Cerrar Sesion
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
+<ion-searchbar
+  class="search-bar"
+  search-icon="search-circle"
+  animated="true"
+  show-clear-button="focus"
+  clear-icon="trash-bin"
+  debounce="800"
+  placeholder="Buscar por area, direccion, lugar..."
+  [value]="''"
+  (ionInput)="onSearchChange($event)">
+</ion-searchbar>
 <ion-content>
+  <ion-list *ngIf="places?.length>0">
+    <ion-item *ngFor="let place of places" class="ion-margin-top" (click)="onPlaceSelect(place)">
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label>
+        {{ place?.title}}
+        <p>
+          <ion-text>
+            {{ place?.address}}
+          </ion-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-row class="select-controls">
+    <ion-col size="auto">
+      <ion-icon style="margin-left: 0.5rem" class="icon" name="school-outline"></ion-icon>
+    </ion-col>
+    <ion-col>
+      <app-places-dropdown (placeSelected)="onPlaceSelected($event)" class="places-dropdown"></app-places-dropdown>
+    </ion-col>
+  </ion-row>
   <div class="map-wrapper">
-    <div class="map" #map></div>
+    <div class="map" #map>
+    </div>
   </div>
 
   <div class="bottom request-controls">
     <ion-row>
       <ion-col width-50>
-        <ion-button color="light" expand="block">
+        <ion-button class="payment" color="light" expand="block">
           <ion-icon name="card"> </ion-icon>
               VISA **45
         </ion-button>
       </ion-col>
       <ion-col width-50>
-        <ion-button color="light" expand="block">
+        <ion-button class="payment" color="light" expand="block">
           <ion-icon name="cash"> </ion-icon>
             EFECTIVO
         </ion-button>
@@ -37,6 +74,6 @@
         Tiempo Aproximado de Pickup 5min
       </ion-col>
     </ion-row>
-
+  
   </div>
 </ion-content>

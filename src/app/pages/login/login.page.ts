@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { APIControllerService } from './../../services/apicontroller.service';
+import { Component, OnInit, inject } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { AuthenticatorService } from 'src/app/services/authenticator.service';
 
@@ -7,40 +8,37 @@ import { AuthenticatorService } from 'src/app/services/authenticator.service';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
-  user:any={
-    "username":"",
-    "password":"",
+export class LoginPage {
+
+  user = {
+    username: '',
+    password: '',
   };
 
   mensaje = '';
-
   constructor(
     private router: Router,
     private auth: AuthenticatorService
 
   ) { }
-  ngOnInit(): void {
-      
-  }
+
   validar() {
-    this.auth.loginBDD(this.user.username, this.user.password).then((connected) => {
-      if (connected) {
-        this.mensaje = 'Bienvenido, Conexion Exitosa!';
+    this.auth.loginBDD(this.user.username, this.user.password).then(
+      (res) => {
+        this.mensaje = 'Conexion exitosa';
         let navigationExtras: NavigationExtras = {
           state: {
             username: this.user.username,
-            password: this.user.password
+            password: this.user.password,
           },
-        }
+        };
         setTimeout(() => {
           this.router.navigate(['/perfil'], navigationExtras);
           this.mensaje = '';
         }, 3000);
-      } else {
-        this.mensaje = 'Credenciales Invalidas!';
-      }
-    });
+      })
+      .catch((error) => {
+        this.mensaje = 'Error en las credenciales';
+      });
   }
-  
 }

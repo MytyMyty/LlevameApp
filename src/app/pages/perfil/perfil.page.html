@@ -22,7 +22,7 @@
     <ion-card>
       <ion-card-header>
         <ion-card-title>
-          <h1>Bienvenido/a {{username}}</h1>
+          <h1>Bienvenido/a {{username}} </h1>
         </ion-card-title>
         <ion-card-subtitle>Perfil Usuario</ion-card-subtitle>
       </ion-card-header>
@@ -55,6 +55,47 @@
                 <ion-datetime id="datetime" presentation="date"></ion-datetime>
               </ng-template>
             </ion-modal>
+          </ion-item>
+          <ion-button (click)="showCarForm = !showCarForm" fill="outline" style="display: block; margin: 1rem auto; width: 50%; font-size: 0.8rem; text-align: center;">
+            {{ showCarForm ? 'Ocultar' : 'Registrar Vehiculo' }}
+          </ion-button>
+          <ion-item>
+            <div *ngIf="showCarForm">
+              <ion-list style="margin: 0; padding: 0;">
+                <ion-item>
+                  <ion-label position="floating">Marca</ion-label>
+                  <ion-input type="text" placeholder="Ingrese marca" style="width: 100%;"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Modelo</ion-label>
+                  <ion-input type="text" placeholder="Ingrese modelo" style="width: 100%;"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Color</ion-label>
+                  <ion-input type="text" placeholder="Ingrese color del auto" style="width: 100%;"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Año</ion-label>
+                  <ion-select placeholder="Seleccione año">
+                    <ion-select-option *ngFor="let year of [].constructor(28); let i = index" [value]="1998 + i">
+                      {{ 1998 + i }}
+                    </ion-select-option>
+                  </ion-select>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Patente</ion-label>
+                  <ion-input type="text" placeholder="Ingrese patente" style="width: 100%;"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Chasis</ion-label>
+                  <ion-input type="text" placeholder="Ingrese Nº de Chasis/Vin/Motor" style="width: 100%;"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Rut</ion-label>
+                  <ion-input type="text" placeholder="Ingrese rut" [value]="rut | rutFormat" (ionInput)="rut = $event.detail.value" style="width: 100%;"></ion-input>
+                </ion-item>
+              </ion-list>
+            </div>
           </ion-item>
         </ion-list>
       </ion-card-content>
