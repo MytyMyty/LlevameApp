@@ -23,27 +23,22 @@ export class LoginPage {
   ) { }
 
   validar() {
-    const { username , password } = this.user;
-    this.auth.loginBDD(username, password).subscribe({
-      next: (response) => {
-        if (response.length >= 1) {
-          this.mensaje = 'Credenciales correctas';
-          const NavigationExtras: NavigationExtras = {
-            state: {
-              username: username,
-              password: password,
-            },
-          }
-          this.router.navigate(['perfil'], NavigationExtras);
-        } else {
-          this.mensaje = 'Credenciales incorrectas';
-        }
-      },
-      error: (error) => {
-        console.log(error);
-      },
-    });
+    this.auth.loginBDD(this.user.username, this.user.password).then(
+      (res) => {
+        this.mensaje = 'Conexion exitosa';
+        let navigationExtras: NavigationExtras = {
+          state: {
+            username: this.user.username,
+            password: this.user.password,
+          },
+        };
+        setTimeout(() => {
+          this.router.navigate(['/perfil'], navigationExtras);
+          this.mensaje = '';
+        }, 3000);
+      })
+      .catch((error) => {
+        this.mensaje = 'Error en las credenciales';
+      });
   }
-          
 }
-

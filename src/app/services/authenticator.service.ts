@@ -1,31 +1,43 @@
-
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Users } from '../interfaces/users';
-import { environment } from 'src/environments/environment';
-import { HttpClient } from '@angular/common/http';
-
+import { StorageService } from './storage.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthenticatorService {
-  private apiURL = environment.apiURL
-
   //Generamos una variable boolean para rectificar el actual estado de conexion con el autentificador
   connnectionStatus: boolean = false;
-  constructor(private http: HttpClient) {}
+  constructor(private storage: StorageService) {}
 
-  loginBDD(username: string, password: string): Observable<Users[]> {
-    return this.http.get<Users[]>(
-      `${this.apiURL}/users?username=${username}&password=${password}`
-    );
+  loginBDD(user: string, pass: String): Promise<boolean> {
+    //OBtengo un promise
+    //Promise tiene 2 valores || resuelto y no resuelto
+    return this.storage
+      .get(user)
+      .then((res) => {
+        //Si funciona me devuelve el user completo
+        if (res.password == pass) {
+          this.connnectionStatus = true;
+          return true;
+        } else {
+          return false;
+        }
+      })
+      .catch((error) => {
+        console.log('Error en el sistema: ' + error);
+        return false;
+      });
   }
-
-
   //Generamos funcion para validar usuario contraseña
   //Si equivale a los datos configurados entregara valor true si no Indicara falso
-  
+  login(user: String, pass: String): boolean {
+    if (user == 'j.riquelmee' && pass == 'pass1234') {
+      this.connnectionStatus = true;
+      return true;
+    }
+    this.connnectionStatus = false;
+    return false;
+  }
   //Logout para desconectar del sistema
   logout() {
     this.connnectionStatus = false;
@@ -34,8 +46,17 @@ export class AuthenticatorService {
   isConected() {
     return this.connnectionStatus;
   }
-
-  getUsername() {
-    return sessionStorage.getItem('username');
+  async registrar(user: any):Promise<boolean> {
+    //set(llave,valor)
+    return this.storage.set(user.username, user).then((res) => {
+        if (res != null) {
+          return true;
+        }else{
+          return false;
+        }
+      })
+      .catch((error) => {
+        return false;
+      });
   }
 }

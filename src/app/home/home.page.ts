@@ -22,6 +22,8 @@ export class HomePage implements OnInit,OnDestroy {
   directionsService:any;
   directionsDisplay:any;
 
+  isPickupRequested = false
+
   places:any[]=[];
   query:string;
   placesSub: Subscription;
@@ -40,7 +42,7 @@ export class HomePage implements OnInit,OnDestroy {
     
   ) {
   }
-  public isPickupRequested: boolean = false;
+
   private animationRunning: boolean = false;
   ngOnInit(): void {
     this.placesSub = this.search_places.subscribe({
@@ -76,6 +78,24 @@ export class HomePage implements OnInit,OnDestroy {
         button.classList.add('selected');
       });
     });
+  }
+
+  confirmPickup() {
+    this.isPickupRequested = true;
+    this.startTrip();
+  }
+
+  startTrip() {
+    // Code to start the trip goes here
+    console.log('Trip started!');
+    
+    
+  }
+
+  cancelPickup() {
+    this.isPickupRequested = false;
+    // Code to cancel the trip goes here
+    console.log('Trip cancelled!');
   }
   onPlaceSelected(place: any) {
     console.log(place);
@@ -249,8 +269,7 @@ export class HomePage implements OnInit,OnDestroy {
        this.animationRunning = false;
      }
    };
-   // Iniciar animacion
-   requestAnimationFrame(animate);
+   
  }
  
  cancelAnimation() {
@@ -291,15 +310,7 @@ export class HomePage implements OnInit,OnDestroy {
    animate();
  }
 
-  confirmPickup(){
-    this.isPickupRequested = true;
-    console.log('confirmPickup');
-  }
 
-  cancelPickup(){
-    this.isPickupRequested = false;
-    console.log('cancelPickup');
-  }
   logout() {
     this.auth.logout()
     this.router.navigate(['/login']);

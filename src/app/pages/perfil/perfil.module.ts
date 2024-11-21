@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RutFormatDirective } from './perfil.page';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -15,6 +16,8 @@ import { PerfilPage } from './perfil.page';
     IonicModule,
     PerfilPageRoutingModule
   ],
-  declarations: [PerfilPage]
+  declarations: [PerfilPage, RutFormatDirective],
+  exports: [RutFormatDirective]
 })
 export class PerfilPageModule {}
+

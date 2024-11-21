@@ -24,5 +24,159 @@
         "email": "correo2@correo.cl",
         "password": "12345678910"
       }
-    ]
+    ],
+    "cars": [
+      {
+        "id": "1",
+        "marca": "Honda",
+        "modelo": "Civic",
+        "color": "Negro",
+        "anio": "2010",
+        "patente": "DEPO43",
+        "chasis": "LCJPBCLXC11000234",
+        "RUT": "12.345.678-9"
+      },
+      {
+        "id": "2",
+        "marca": "Toyota",
+        "modelo": "Corolla",
+        "color": "Gris",
+        "anio": "2012",
+        "patente": "CBFR21",
+        "chasis": "JH4KA8260MC000123",
+        "RUT": "23.331.749-0"
+      },
+      {
+        "id": "3",
+        "marca": "Ford",
+        "modelo": "Focus",
+        "color": "Blanco",
+        "anio": "2015",
+        "patente": "BFTU75",
+        "chasis": "1FAFP34N25W123456",
+        "RUT": "19.537.804-6"
+      },
+      {
+        "id": "4",
+        "marca": "Chevrolet",
+        "modelo": "Aveo",
+        "color": "Rojo",
+        "anio": "2011",
+        "patente": "HJ9865",
+        "chasis": "KL1TD52635B123456",
+        "RUT": "23.178.901-2"
+      },
+      {
+        "id": "5",
+        "marca": "Nissan",
+        "modelo": "Sentra",
+        "color": "Azul",
+        "anio": "2014",
+        "patente": "CMKJ12",
+        "chasis": "3N1AB6AP2BL123456",
+        "RUT": "18.759.062-3"
+      },
+      {
+        "id": "6",
+        "marca": "Mazda",
+        "modelo": "3",
+        "color": "Verde",
+        "anio": "2007",
+        "patente": "ZP8934",
+        "chasis": "JM1BK32F281123456",
+        "RUT": "20.879.113-4"
+      },
+      {
+        "id": "7",
+        "marca": "Hyundai",
+        "modelo": "Elantra",
+        "color": "Plateado",
+        "anio": "2016",
+        "patente": "BSEJ48",
+        "chasis": "KMHDH4AE1CU123456",
+        "RUT": "18.901.261-5"
+      },
+      {
+        "id": "8",
+        "marca": "Kia",
+        "modelo": "Rio",
+        "color": "Amarillo",
+        "anio": "2009",
+        "patente": "CUVX96",
+        "chasis": "KNADH4A39B1234567",
+        "RUT": "19.072.235-9"
+      },
+      {
+        "id": "9",
+        "marca": "Subaru",
+        "modelo": "Impreza",
+        "color": "Morado",
+        "anio": "2018",
+        "patente": "DJRT29",
+        "chasis": "JF1GE61658H123456",
+        "RUT": "20.183.436-7"
+      },
+      {
+        "id": "10",
+        "marca": "Volkswagen",
+        "modelo": "Golf",
+        "color": "Negro",
+        "anio": "2017",
+        "patente": "EXCV12",
+        "chasis": "WVWAH63B82P123456",
+        "RUT": "21.274.597-2"
+      },
+      {
+        "id": "11",
+        "marca": "Honda",
+        "modelo": "Accord",
+        "color": "Rosa",
+        "anio": "2008",
+        "patente": "AJMD74",
+        "chasis": "1HGCM82633A123456",
+        "RUT": "22.045.678-K"
+      },
+      {
+        "id": "12",
+        "marca": "Toyota",
+        "modelo": "Camry",
+        "color": "Cian",
+        "anio": "2011",
+        "patente": "ECAH36",
+        "chasis": "4T1BG22K9XU123456",
+        "RUT": "20.196.209-2"
+      },
+      {
+        "id": "13",
+        "marca": "Ford",
+        "modelo": "Taurus",
+        "color": "Oro",
+        "anio": "2007",
+        "patente": "ADKL18",
+        "chasis": "1FAFP53U4XA123456",
+        "RUT": "19.517.820-1"
+      },
+      {
+        "id": "14",
+        "marca": "Chevrolet",
+        "modelo": "Malibu",
+        "color": "Turquesa",
+        "anio": "2006",
+        "patente": "ZRTP92",
+        "chasis": "1G1ZT54826F123456",
+        "RUT": "19.618.921-7"
+      },
+      {
+        "id": "15",
+        "marca": "Nissan",
+        "modelo": "Altima",
+        "color": "Violeta",
+        "anio": "2019",
+        "patente": "ERBT52",
+        "chasis": "1N4AL11D75C123456",
+        "RUT": "20.489.022-7"
+      }
+
+    ]  
+
   }
