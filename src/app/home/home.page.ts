@@ -2,7 +2,6 @@ import { GmapsService } from '../services/gmaps/gmaps.service';
 import { Component, ElementRef, ViewChild, Renderer2, OnInit, inject, OnDestroy, NgZone } from '@angular/core';
 import { AuthenticatorService } from 'src/app/services/authenticator.service';
 import { Router } from '@angular/router';
-import { PlacesService } from 'src/app/services/gmaps/places-service.service';
 import { BehaviorSubject, max, Subscription } from 'rxjs';
 
 
@@ -16,11 +15,16 @@ export class HomePage implements OnInit,OnDestroy {
   @ViewChild('map',{static:true}) mapElementRef!: ElementRef;
   googleMaps: any;
   center = { lat: -33.4328394303453, lng: -70.61491346414431 };
+  //Ubicacion inicial Predeterminada del Driver, se debe de actualizar con la ubicacion del driver (direccion de hogar del driver ingresada en formulario)
   source: any={ lat: -33.4990709, lng: -70.665723 };
   dest: any={ lat: -33.47162921236009, lng:  -70.65562840595744 };
   map : any;
   directionsService:any;
   directionsDisplay:any;
+  routeDisplay: any;
+  
+  previousPosition: any;
+  previousSegment: any;
 
   isPickupRequested = false
 
@@ -84,18 +88,17 @@ export class HomePage implements OnInit,OnDestroy {
     this.isPickupRequested = true;
     this.startTrip();
   }
-
   startTrip() {
-    // Code to start the trip goes here
-    console.log('Trip started!');
-    
-    
+    console.log('Viaje Iniciado!');
+    requestAnimationFrame(this.animate);
+  }
+  animate(animate: any) {
+    throw new Error('Method not implemented.');
   }
 
   cancelPickup() {
     this.isPickupRequested = false;
-    // Code to cancel the trip goes here
-    console.log('Trip cancelled!');
+    console.log('Viaje Cancelado!');
   }
   onPlaceSelected(place: any) {
     console.log(place);
@@ -124,31 +127,37 @@ export class HomePage implements OnInit,OnDestroy {
 
       const sourceIconUrl = 'assets/imgs/car.png';
       const destinationIconUrl = 'assets/imgs/pin.png';
-
+      
+      //Ubicacion inicial driver
       const source_position = new googleMaps.LatLng(
         this.source.lat,
         this.source.lng
       );
-
+      
+      //Ubicacion de pickup/ ubicacion del usuario
       const destination_position = new googleMaps.LatLng(
         this.dest.lat,
         this.dest.lng
       );
-
+      
+      //Se le asigna un icono al marcador del driver (auto)
       this.source_marker =await this.addMarker(
         source_position,
         sourceIconUrl,
       );
-
+      
+      //Se le asigna un icono al marcador del usuario (persona)
       await this.addMarker(
   
         destination_position,
         destinationIconUrl,
       );
-
+      
+      //Se asignan los servicios de direccion para luego ser utilizados para la ruta del driver
       this.directionsService = new googleMaps.DirectionsService();
       this.directionsDisplay = new googleMaps.DirectionsRenderer({ map: map });
-
+      
+      //Configuracion de la linea de ruta mostrada en el mapa
       this.directionsDisplay.setOptions({
         polylineOptions: {
           strokeWeight: 4,
@@ -241,36 +250,35 @@ export class HomePage implements OnInit,OnDestroy {
 
  //Animar el marcador a traves de la ruta
  animateMarkerAlongRoute(positions: any[]) {
- 
-   let index = 0;
-   const totalPositions = positions.length;
-   const stepCount = 260; //Puntos a traves de la ruta
-   const segment = Math.floor(totalPositions / stepCount);
-   const interval = 40;
- 
-   const animate = () => {
-     if (index < totalPositions - 1) {
-       // Siguiente posicion
-       const nextPosition = positions[index];
- 
-       // Actualizar la posicion del marcador
-       this.changeMarkerPosition(nextPosition);
- 
-       // Incrementar index para seguir a la siguiente posicion
-       index += 1;
- 
-       // Programar la siguiente animacion
-       setTimeout(() => {
-         requestAnimationFrame(animate);
-       }, interval);
-     } else {
-       // Asegurar que llegue al destino final
-       this.changeMarkerPosition(positions[totalPositions - 1]);
-       this.animationRunning = false;
-     }
-   };
-   
- }
+  let index = 0;
+  const totalPositions = positions.length;
+  const stepCount = 260; //Puntos a traves de la ruta
+  const segment = Math.floor(totalPositions / stepCount);
+  const interval = 40;
+
+  this.animate = () => {
+    if (index < totalPositions - 1) {
+      // Siguiente posicion
+      const nextPosition = positions[index];
+
+      // Actualizar la posicion del marcador
+      this.changeMarkerPosition(nextPosition);
+
+      // Incrementar index para seguir a la siguiente posicion
+      index += 1;
+
+      // Programar la siguiente animacion
+      setTimeout(() => {
+        requestAnimationFrame((timestamp) => this.animate(timestamp));
+      }, interval);
+    } else {
+      // Asegurar que llegue al destino final
+      this.changeMarkerPosition(positions[totalPositions - 1]);
+      this.animationRunning = false;
+    }
+  };
+}
+
  
  cancelAnimation() {
    this.animationRunning = false;
