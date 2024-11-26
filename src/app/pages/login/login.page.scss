@@ -8,14 +8,14 @@ h1 {
     margin-bottom: 10px;
     font-size: 32px;
     font-weight: 700;
-    color: #333;
+    color: #fff;
     text-shadow: 2px 2px 2px #000;
     display: block;
     margin: 0.5rem auto;
     text-align: center;
 }
 h3{
-    color: #666;
+    color: #939fab;
     font-weight: 600;
 }
 
@@ -30,9 +30,9 @@ ion-item{
     border-radius: 10px;
     outline: none;
     padding: 1rem;
-    background: #f7f7f7;
+    background: none;
     z-index: 1;
-    color: #333; 
+    color: #ffffff; 
     transition: 0.3s;
 }
 .google-button{
