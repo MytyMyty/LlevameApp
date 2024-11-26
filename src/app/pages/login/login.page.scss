@@ -8,14 +8,14 @@ h1 {
     margin-bottom: 10px;
     font-size: 32px;
     font-weight: 700;
-    color: #fff;
+    color: #333;
     text-shadow: 2px 2px 2px #000;
     display: block;
     margin: 0.5rem auto;
     text-align: center;
 }
 h3{
-    color: #939fab;
+    color: #666;
     font-weight: 600;
 }
 
@@ -30,9 +30,9 @@ ion-item{
     border-radius: 10px;
     outline: none;
     padding: 1rem;
-    background: none;
+    background: #f7f7f7;
     z-index: 1;
-    color: #ffffff;
+    color: #333; 
     transition: 0.3s;
 }
 .google-button{
@@ -86,4 +86,10 @@ ion-button[type="button2"]{
     &:hover{
         --background: rgba(255, 255, 255, 0.1);
     }
+
+}
+gradient *{
+    background-size: 300% 100%;
+    background-position: 0% 100%;
+    color: #333; 
 }
