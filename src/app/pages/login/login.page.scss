@@ -38,7 +38,7 @@ ion-item{
 .google-button{
     --box-shadow: none;
     --border-radius: 10px;
-    --background:linear-gradient(45deg,#000000, #010000,#020000, #010000,#020000, #010000,#020000, #010000,#020000, #010000,#020000, #010000,#020000, #010000,#020000,#010000,#020000,#010000,#020000,#f44242, #f44242, #34A853,  #34A853,#FBBC05, #FBBC05);
+    --background:linear-gradient(45deg,rgb(0, 9, 39),rgb(0, 9, 39),rgb(0, 9, 39),rgb(0, 9, 39),rgb(0, 9, 39),rgb(0, 9, 39),rgb(0, 9, 39),rgb(0, 9, 39),rgb(0, 9, 39),rgb(0, 9, 39),rgb(0, 9, 39),rgba(30, 19, 78),rgba(30, 19, 78),rgba(30, 19, 78),#f44242, #f44242, #34A853,  #34A853,#FBBC05, #FBBC05);
     background-size: 300% 100%;
     background-position: 0% 100%;
     transition: background-position 0.3s ease-out;

@@ -5,11 +5,12 @@
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "start":  "concurrently \"ng serve\" \"npm run start:json-server\"",
+    "build": "ng build & npm run start:json-server",
+    "watch": "ng build --watch --configuration development & npm run start:json-server",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "start:json-server": "concurrently \"json-server src/data/places.json --port 3300\" \"json-server src/data/dbb.json --port 3301\""
   },
   "private": true,
   "dependencies": {
@@ -33,6 +34,7 @@
     "@ionic/storage-angular": "^4.0.0",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
+    "concurrently": "^9.1.0",
     "express": "^4.21.1",
     "fontawesome": "^5.6.3",
     "ionicons": "^7.0.0",
