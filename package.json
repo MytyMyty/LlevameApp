@@ -5,12 +5,11 @@
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
-    "start":  "concurrently \"ng serve\" \"npm run start:json-server\"",
-    "build": "ng build & npm run start:json-server",
-    "watch": "ng build --watch --configuration development & npm run start:json-server",
+    "start":  "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint",
-    "start:json-server": "concurrently \"json-server src/data/places.json --port 3300\" \"json-server src/data/dbb.json --port 3301\""
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
