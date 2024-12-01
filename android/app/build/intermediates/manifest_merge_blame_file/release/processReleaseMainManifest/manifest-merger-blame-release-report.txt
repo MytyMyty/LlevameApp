@@ -1,0 +1,199 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="io.ionic.starter"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="22"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- Permissions -->
+12
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:40:5-67
+13-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:40:22-64
+14    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Include required permissions for Google Maps API to run. -->
+14-->[:capacitor-haptics] E:\Copias\APPESTA\LlevameApp\node_modules\@capacitor\haptics\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-66
+14-->[:capacitor-haptics] E:\Copias\APPESTA\LlevameApp\node_modules\@capacitor\haptics\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:22-63
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[com.google.android.gms:play-services-maps:19.0.0] E:\DwnJDk\caches\8.9\transforms\b93bf03b1f725a73ff5848f6ddfcbc33\transformed\play-services-maps-19.0.0\AndroidManifest.xml:23:5-79
+15-->[com.google.android.gms:play-services-maps:19.0.0] E:\DwnJDk\caches\8.9\transforms\b93bf03b1f725a73ff5848f6ddfcbc33\transformed\play-services-maps-19.0.0\AndroidManifest.xml:23:22-76
+16
+17    <uses-feature
+17-->[com.google.android.gms:play-services-maps:19.0.0] E:\DwnJDk\caches\8.9\transforms\b93bf03b1f725a73ff5848f6ddfcbc33\transformed\play-services-maps-19.0.0\AndroidManifest.xml:26:5-28:35
+18        android:glEsVersion="0x00020000"
+18-->[com.google.android.gms:play-services-maps:19.0.0] E:\DwnJDk\caches\8.9\transforms\b93bf03b1f725a73ff5848f6ddfcbc33\transformed\play-services-maps-19.0.0\AndroidManifest.xml:27:9-41
+19        android:required="true" />
+19-->[com.google.android.gms:play-services-maps:19.0.0] E:\DwnJDk\caches\8.9\transforms\b93bf03b1f725a73ff5848f6ddfcbc33\transformed\play-services-maps-19.0.0\AndroidManifest.xml:28:9-32
+20
+21    <queries>
+21-->[com.google.android.gms:play-services-maps:19.0.0] E:\DwnJDk\caches\8.9\transforms\b93bf03b1f725a73ff5848f6ddfcbc33\transformed\play-services-maps-19.0.0\AndroidManifest.xml:30:5-34:15
+22
+23        <!-- Needs to be explicitly declared on Android R+ -->
+24        <package android:name="com.google.android.apps.maps" />
+24-->[com.google.android.gms:play-services-maps:19.0.0] E:\DwnJDk\caches\8.9\transforms\b93bf03b1f725a73ff5848f6ddfcbc33\transformed\play-services-maps-19.0.0\AndroidManifest.xml:33:9-64
+24-->[com.google.android.gms:play-services-maps:19.0.0] E:\DwnJDk\caches\8.9\transforms\b93bf03b1f725a73ff5848f6ddfcbc33\transformed\play-services-maps-19.0.0\AndroidManifest.xml:33:18-61
+25    </queries>
+26
+27    <permission
+27-->[androidx.core:core:1.12.0] E:\DwnJDk\caches\8.9\transforms\d5183fa4c59e7f876fa4f172516dcc7b\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+28        android:name="io.ionic.starter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+28-->[androidx.core:core:1.12.0] E:\DwnJDk\caches\8.9\transforms\d5183fa4c59e7f876fa4f172516dcc7b\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+29        android:protectionLevel="signature" />
+29-->[androidx.core:core:1.12.0] E:\DwnJDk\caches\8.9\transforms\d5183fa4c59e7f876fa4f172516dcc7b\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+30
+31    <uses-permission android:name="io.ionic.starter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+31-->[androidx.core:core:1.12.0] E:\DwnJDk\caches\8.9\transforms\d5183fa4c59e7f876fa4f172516dcc7b\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+31-->[androidx.core:core:1.12.0] E:\DwnJDk\caches\8.9\transforms\d5183fa4c59e7f876fa4f172516dcc7b\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+32
+33    <application
+33-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:4:5-36:19
+34        android:allowBackup="true"
+34-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:5:9-35
+35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+35-->[androidx.core:core:1.12.0] E:\DwnJDk\caches\8.9\transforms\d5183fa4c59e7f876fa4f172516dcc7b\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+36        android:extractNativeLibs="true"
+37        android:icon="@mipmap/ic_launcher"
+37-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:6:9-43
+38        android:label="@string/app_name"
+38-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:7:9-41
+39        android:roundIcon="@mipmap/ic_launcher_round"
+39-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:8:9-54
+40        android:supportsRtl="true"
+40-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:9:9-35
+41        android:theme="@style/AppTheme" >
+41-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:10:9-40
+42        <activity
+42-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:12:9-25:20
+43            android:name="io.ionic.starter.MainActivity"
+43-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:14:13-41
+44            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
+44-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:13:13-129
+45            android:exported="true"
+45-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:18:13-36
+46            android:label="@string/title_activity_main"
+46-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:15:13-56
+47            android:launchMode="singleTask"
+47-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:17:13-44
+48            android:theme="@style/AppTheme.NoActionBarLaunch" >
+48-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:16:13-62
+49            <intent-filter>
+49-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:20:13-23:29
+50                <action android:name="android.intent.action.MAIN" />
+50-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:21:17-69
+50-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:21:25-66
+51
+52                <category android:name="android.intent.category.LAUNCHER" />
+52-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:22:17-77
+52-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:22:27-74
+53            </intent-filter>
+54        </activity>
+55
+56        <provider
+57            android:name="androidx.core.content.FileProvider"
+57-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:28:13-62
+58            android:authorities="io.ionic.starter.fileprovider"
+58-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:29:13-64
+59            android:exported="false"
+59-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:30:13-37
+60            android:grantUriPermissions="true" >
+60-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:31:13-47
+61            <meta-data
+61-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:32:13-34:64
+62                android:name="android.support.FILE_PROVIDER_PATHS"
+62-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:33:17-67
+63                android:resource="@xml/file_paths" />
+63-->E:\Copias\APPESTA\LlevameApp\android\app\src\main\AndroidManifest.xml:34:17-51
+64        </provider>
+65
+66        <meta-data
+66-->[com.google.maps.android:android-maps-utils:3.8.2] E:\DwnJDk\caches\8.9\transforms\f0da428c1da4940c1d6b66872f8087c5\transformed\android-maps-utils-3.8.2\AndroidManifest.xml:8:9-10:69
+67            android:name="com.google.android.gms.version"
+67-->[com.google.maps.android:android-maps-utils:3.8.2] E:\DwnJDk\caches\8.9\transforms\f0da428c1da4940c1d6b66872f8087c5\transformed\android-maps-utils-3.8.2\AndroidManifest.xml:9:13-58
+68            android:value="@integer/google_play_services_version" /> <!-- Needs to be explicitly declared on P+ -->
+68-->[com.google.maps.android:android-maps-utils:3.8.2] E:\DwnJDk\caches\8.9\transforms\f0da428c1da4940c1d6b66872f8087c5\transformed\android-maps-utils-3.8.2\AndroidManifest.xml:10:13-66
+69        <uses-library
+69-->[com.google.android.gms:play-services-maps:19.0.0] E:\DwnJDk\caches\8.9\transforms\b93bf03b1f725a73ff5848f6ddfcbc33\transformed\play-services-maps-19.0.0\AndroidManifest.xml:39:9-41:40
+70            android:name="org.apache.http.legacy"
+70-->[com.google.android.gms:play-services-maps:19.0.0] E:\DwnJDk\caches\8.9\transforms\b93bf03b1f725a73ff5848f6ddfcbc33\transformed\play-services-maps-19.0.0\AndroidManifest.xml:40:13-50
+71            android:required="false" />
+71-->[com.google.android.gms:play-services-maps:19.0.0] E:\DwnJDk\caches\8.9\transforms\b93bf03b1f725a73ff5848f6ddfcbc33\transformed\play-services-maps-19.0.0\AndroidManifest.xml:41:13-37
+72
+73        <activity
+73-->[com.google.android.gms:play-services-base:18.5.0] E:\DwnJDk\caches\8.9\transforms\1c38ff07d40f55f566ebd3f42773e3e8\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+74            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+74-->[com.google.android.gms:play-services-base:18.5.0] E:\DwnJDk\caches\8.9\transforms\1c38ff07d40f55f566ebd3f42773e3e8\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+75            android:exported="false"
+75-->[com.google.android.gms:play-services-base:18.5.0] E:\DwnJDk\caches\8.9\transforms\1c38ff07d40f55f566ebd3f42773e3e8\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+76            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+76-->[com.google.android.gms:play-services-base:18.5.0] E:\DwnJDk\caches\8.9\transforms\1c38ff07d40f55f566ebd3f42773e3e8\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+77
+78        <provider
+78-->[androidx.emoji2:emoji2:1.2.0] E:\DwnJDk\caches\8.9\transforms\039628db259a32c94dcc4505d4e14015\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+79            android:name="androidx.startup.InitializationProvider"
+79-->[androidx.emoji2:emoji2:1.2.0] E:\DwnJDk\caches\8.9\transforms\039628db259a32c94dcc4505d4e14015\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+80            android:authorities="io.ionic.starter.androidx-startup"
+80-->[androidx.emoji2:emoji2:1.2.0] E:\DwnJDk\caches\8.9\transforms\039628db259a32c94dcc4505d4e14015\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+81            android:exported="false" >
+81-->[androidx.emoji2:emoji2:1.2.0] E:\DwnJDk\caches\8.9\transforms\039628db259a32c94dcc4505d4e14015\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+82            <meta-data
+82-->[androidx.emoji2:emoji2:1.2.0] E:\DwnJDk\caches\8.9\transforms\039628db259a32c94dcc4505d4e14015\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+83                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+83-->[androidx.emoji2:emoji2:1.2.0] E:\DwnJDk\caches\8.9\transforms\039628db259a32c94dcc4505d4e14015\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+84                android:value="androidx.startup" />
+84-->[androidx.emoji2:emoji2:1.2.0] E:\DwnJDk\caches\8.9\transforms\039628db259a32c94dcc4505d4e14015\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+85            <meta-data
+85-->[androidx.lifecycle:lifecycle-process:2.6.1] E:\DwnJDk\caches\8.9\transforms\ccc32084a26144878d497425e2265d1c\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+86                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+86-->[androidx.lifecycle:lifecycle-process:2.6.1] E:\DwnJDk\caches\8.9\transforms\ccc32084a26144878d497425e2265d1c\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+87                android:value="androidx.startup" />
+87-->[androidx.lifecycle:lifecycle-process:2.6.1] E:\DwnJDk\caches\8.9\transforms\ccc32084a26144878d497425e2265d1c\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+88            <meta-data
+88-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+89                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+89-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+90                android:value="androidx.startup" />
+90-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+91        </provider>
+92
+93        <receiver
+93-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+94            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+94-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+95            android:directBootAware="false"
+95-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+96            android:enabled="true"
+96-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+97            android:exported="true"
+97-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+98            android:permission="android.permission.DUMP" >
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+99            <intent-filter>
+99-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+100                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+100-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+100-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+101            </intent-filter>
+102            <intent-filter>
+102-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+103                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+104            </intent-filter>
+105            <intent-filter>
+105-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+106                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+107            </intent-filter>
+108            <intent-filter>
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+109                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+109-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+109-->[androidx.profileinstaller:profileinstaller:1.3.0] E:\DwnJDk\caches\8.9\transforms\9e3c9a077e2d0c1c12372fdc7297eff6\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+110            </intent-filter>
+111        </receiver>
+112    </application>
+113
+114</manifest>
